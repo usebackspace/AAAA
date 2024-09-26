@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="{% static "marvel/css/style.css" %}">
 </head>
 <body>
-    <h1>I am a Spiderman</h1>
+    <h1>I am a {{superhero|length}}</h1>
+    {% comment %} <h1>Villian is {{villian}}</h1>
+
+    {% if superhero == 'batman' %}
+    <h2> vilian of batman is joker</h2>
+    {% elif superhero == 'spiderman' %}
+    <h2> Villian of spiderman is Amar</h2>
+    {% else %}
+    <h2>No villian is there on planet</h2>
+    {% endif %}
+
+    {% comment %} {% for v in villian %}
+       <h2>{{v}}</h2> 
+    {% endfor %} {% endcomment %}
+
+    {% comment %} <hr>
+
+    {{superhero}}
+    <h2>{{superhero.spidy}}</h2>
+    <h2>{{superhero.bat}}</h2> {% endcomment %} 
+    
 </body>
 </html>
