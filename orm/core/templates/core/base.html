@@ -1,0 +1,24 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {% block title %}Petstore| {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "core/css/bootstrap.min.css" %}">
+  </head>
+  <body>
+   
+    {% comment %} {% include "core/navbar.html" %} {% endcomment %}
+    
+    {% block content %}
+    <h1>Hello, world!</h1>
+    {% endblock content %}
+    
+    {% comment %} {% include "core/footer.html" %} {% endcomment %}
+
+    <script src="{% static "core/js/jquery.js" %}"></script>
+    <script src="{% static "core/js/popper.js" %}"></script>
+    <script src="{% static "core/js/boostrap.min.js" %}"></script>
+  </body>
+</html>
