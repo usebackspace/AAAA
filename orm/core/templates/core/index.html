@@ -7,5 +7,28 @@
 </head>
 <body>
     <h1>ORM</h1>
+
+    {{marvel}}
+
+    <h1>Marvel Table</h1>
+
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Age</th>
+        </tr>
+        {% for m in marvel %}
+        <tr>
+            <td>{{m.id}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.city}}</td>
+            <td>{{m.age}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+   
 </body>
 </html>
