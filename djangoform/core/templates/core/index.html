@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Django Form</h1>
+
+  <form action="">
+    <table>
+
+      {{mf.as_table}}
+      <hr>
+      {{mf.as_p}}
+      <hr>
+      {{mf.as_ul}}
+      <hr>
+    </table>
+    <input type="submit" name="" id="">
+  </form>
+
+    
+    <h1>Name Field</h1>
+    mf.name:  {{mf.name}} <br><br>
+    mf.name.label :  {{mf.name.label}} <br><br>
+    mf.name.label_tag: {{mf.name.label_tag}}<br><br>
+    mf.name.id_for_label: {{mf.name.id_for_label}}<br><br>
+    mf.name.value: {{mf.name.value}}<br><br>
+    mf.name.html_name: {{mf.name.html_name}}<br><br>
+    help text: {{mf.name.help_text}}<br><br>
+    name .name{{mf.name.name}}<br><br>
+
+    <h1>For Loop</h1>
+
+    {% for m in mf %}
+     {{m.label_tag}} {{m}}<br><br>
+    
+    {% endfor %}
+  
+</body>
+</html>
