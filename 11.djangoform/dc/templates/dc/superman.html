@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'dc/css/main.css' %}" > {% endcomment %}
+
+</head>
+<body>
+    {% comment %} <h1>I am a Superman.</h1>
+    <h1>Willian of Superman is {{villian}}</h1>
+    <img src="{% static "dc/images/superman.jpg" %}" alt="Batman"> {% endcomment %}
+
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {{dc.as_p}}
+        <input type="submit">
+    </form>
+    
+    
+    
+
+</body>
+</html>
