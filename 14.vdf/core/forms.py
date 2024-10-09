@@ -12,6 +12,7 @@ class MarvelForm(forms.Form):
     #     if len(validate_name)>5:
     #         raise forms.ValidationError('Enter the Name Less than 5 words')
 
+# =======================================================================================
     # for validation of multiple field, we have to create inbuilt clean function .
 
     def clean(self):
@@ -25,4 +26,5 @@ class MarvelForm(forms.Form):
             raise forms.ValidationError('Enter the Name Less than 5 words')
         
         if len(validate_email)>8:
-            raise forms.ValidationError('Enter the mail ')
+            raise forms.ValidationError('Enter the proper mail address ')
+        
