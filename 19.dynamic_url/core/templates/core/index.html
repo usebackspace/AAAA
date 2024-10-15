@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Dynamic URL</h1>
+
+  {% comment %} <a href="{% url "product" 1 %}">Product 1</a>
+  <a href="{% url "product" 2 %}">Product 2</a>
+  <a href="{% url "product" 3 %}">Product 3</a>
+  <a href="{% url "product" 4 %}">Product 4</a> {% endcomment %}
+
+  <a href="{% url "product" 1 11 %}">Product 1 11</a>
+  <a href="{% url "product" 2 22 %}">Product 2 22</a>
+  <a href="{% url "product" 3 33 %}">Product 3 33</a>
+  <a href="{% url "product" 4 44 %}">Product 4 44</a>
+ 
+</body>
+</html>
