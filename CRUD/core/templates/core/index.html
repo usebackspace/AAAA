@@ -2,6 +2,57 @@
 
 {% block content %}
 
-<h1>HEllo</h1>
+<div class="crud-heading">
+    <h1>Crud Operation</h1>
+</div>
 
+<div class="avenger">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="new-avenger">
+                    <h1>Add New Avenger</h1>
+                </div>
+                <div class="avenger-form">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{mf.as_p}}
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="avenger-database">
+                    <h1>Avenger DataBase</h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">#Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Heroic Name</th>
+                            <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            {% for m in marvel %}
+                            <th scope="row">{{m.id}}</th>
+                            <td>{{m.name}}</td>
+                            <td>{{m.heroic_name}}</td>
+                            <td>
+                                <a href="{% url "update" m.id %}"><button>Edit</button></a>
+                                <form action="{% url "delete" m.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="submit" value='Delete'>
+                                </form>
+                            </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
