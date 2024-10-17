@@ -19,6 +19,14 @@
                         {{mf.as_p}}
                         <input type="submit" class="btn btn-success " value="Add Avenger">
                     </form>
+                    {% if messages %}
+                        {% for message in messages %}
+                            
+                             
+                            
+                            <span {% if message.tags %} class="alert alert-{{message.tags}}" {% endif %}>{{message}}</span> 
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
             <div class="col-sm-8">
