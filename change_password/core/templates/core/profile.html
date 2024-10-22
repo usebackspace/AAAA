@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Profile Page</h1>
+
+    <h2>Welcome {{request.user}}</h2>
+     {% if messages %}
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    {% endif %}
+    <br>
+    <a href="{% url "logout" %}"><button type="button">logout</button></a>
+    <a href="{% url "pcf" %}"><button type="button">Password Change</button></a>
+    <a href="{% url "spf" %}"><button type="button">Reset Password</button></a>
+</body>
+</html>
