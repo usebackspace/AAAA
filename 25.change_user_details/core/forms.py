@@ -9,14 +9,14 @@ class SignUpForm(UserCreationForm):
         fields =['username','first_name','last_name','email']
 
 
-class UserEditForm(UserChangeForm):
+class ChangeUserDetailForm(UserChangeForm):
     password =None
     class Meta:
         model =User
         fields =['username','first_name','last_name','email','last_login','date_joined']
 
 
-class AdminEditForm(UserChangeForm):
+class ChangeAdminDetailForm(UserChangeForm):
     password =None
     class Meta:
         model =User

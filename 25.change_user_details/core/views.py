@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import AuthenticationForm,PasswordChangeForm,SetPasswordForm,UserChangeForm
 from django.contrib import messages
-from .forms import  SignUpForm,UserEditForm,AdminEditForm
+from .forms import  SignUpForm,ChangeAdminDetailForm,ChangeUserDetailForm
 from django.contrib.auth import authenticate,login,logout,update_session_auth_hash
 from django.contrib.auth.models import User
 
@@ -42,20 +42,20 @@ def user_profile(request):
     if request.user.is_authenticated:
         if request.method =='POST':
             if request.user.is_superuser ==True:
-                mf=AdminEditForm(request.POST,instance=request.user)
+                mf=ChangeAdminDetailForm(request.POST,instance=request.user)
             else:
-                mf= UserEditForm(request.POST,instance=request.user)
+                mf=ChangeUserDetailForm(request.POST,instance=request.user)
             if mf.is_valid():
                 mf.save()
                 messages.success(request,'Profile Updated Successfully !')
                 return redirect('profile')
         else:
             if request.user.is_superuser ==True:
-                mf=AdminEditForm(instance=request.user)
+                mf=ChangeAdminDetailForm(instance=request.user)
                 user=User.objects.all()
             else:
                 user =None
-                mf =UserEditForm(instance=request.user)
+                mf =ChangeUserDetailForm(instance=request.user)
         return render(request,'core/profile.html',{'mf':mf,'user':user})
     else:
         return redirect('login')
