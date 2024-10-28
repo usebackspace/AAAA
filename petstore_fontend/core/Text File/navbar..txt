@@ -1,0 +1,14 @@
+1. search :- fixed Nav bar in bootstrap 4.
+
+   fixed-top :- Is used to fix the nav bar at the top of position
+
+2. Navbar color :- style = "background-color: rgb(245, 229, 10); in <nav> tag.
+
+3. search :- align search bar in middle of nav bar in bootstrap.
+        mr-auto :- automatically adjust the search bar
+        <form class="form-inline my-2 my-lg-0 mr-auto">
+
+4. Increase length of search bar.
+   style="width:700px" inline css
+   <input class="form-control custom-search-bar mr-5 " type="search" placeholder="Search" aria-label="Search" style="width:700px" >
+   

@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block title %}Pet Details{% endblock title %}
+
+{% block content %}
+
+<div class="container petdetails">
+    <div class="row">
+        <div class="col-sm-6">
+                <span class="border border-danger">
+                    <img src="static/core/images/dog/petdetails/Beagle.jpg" class="img-fluid rounded border border-primary" alt="Responsive image" >
+                </span>
+        </div>
+        <div class="col-sm-6">
+            <div class="container">
+                <h1 class="jumbotron-heading text-center text-danger">Beagle</h1>
+                <p class="lead text-center">The Beagle is a small to medium-sized hound known for its friendly temperament and keen sense of smell.</p>
+                    <div class="text-center">
+                        <h4 class="font-weight-bold"><i class="fa-solid fa-indian-rupee-sign"></i>13999 <small class="fw-light rupee">15999</small> <small class="text-danger">(72% off)</small></h4> 
+                        <a href="#" class="btn btn-info my-2 mr-2">Add to cart</a>
+                        <a href="#" class="btn btn-success my-2">Buy Now</a>
+                    </div>
+                <div class="description">
+                <h2 class="jumbotron-heading mt-5">Description</h2>
+                    The Beagle is a small to medium-sized hound known for its friendly temperament and keen sense of smell. With a distinctive appearance featuring a short coat, long ears, and a tail carried high, Beagles are energetic and sociable. Their intelligence and gentle nature make them excellent family companions, often used in scent detection.
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    
+
+    
+{% endblock content %}

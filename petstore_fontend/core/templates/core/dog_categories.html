@@ -1,0 +1,120 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+{% block title %}Dog Categories{% endblock title %}
+
+{% block content %}
+
+<!-- Dog Card-->
+<div class="container ">                         <!-- we have created new container class-->
+    <div class="row">                           <!-- we have created row class-->
+        <div class="col-sm-4 ">
+          <a href="{% url "petdetails" %}" style="text-decoration: none; ">        
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top " src="{% static "core/images/dog/Beagle.jpg" %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Beagle</h5>
+                   <div class="text-center">
+                        <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>13999 <small class="fw-light rupee">15999</small> <small class="text-danger">(72% off)</small></h5> 
+                        
+                    </div>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="col-sm-4">      
+          <a href="" style="text-decoration: none; ">        
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Boxer.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Boxer</h5>
+                  <p class="card-text">Loyal, playful, and energetic, Boxers are excellent family pets.</p>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="col-sm-4">        
+          <a href="" style="text-decoration: none; ">
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Bulldog.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Bulldog</h5>
+                  <p class="card-text">Despite their tough appearance, they have a gentle disposition.</p>
+                </div>
+              </div>
+          </a>        
+        </div>
+        <div class="col-sm-4">  
+          <a href="" style="text-decoration: none; ">        
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Dachshund.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Dachshund</h5>
+                  <p class="card-text">Charming demeanor make them cherished family pets.</p>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="col-sm-4">  
+          <a href="" style="text-decoration: none; ">        
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top img-fluid" src="static/core/images/dog/German_Shepherd.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">German Shepherd</h5>
+                  <p class="card-text"> Versatile dog breed known for its intelligence, loyalty, and courage.</p>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="col-sm-4"> 
+          <a href="" style="text-decoration: none; ">        
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Golden_Retriever.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Golden Retriever</h5>
+                  <p class="card-text">Renowned for its beautiful golden coat and gentle demeanor. </p>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a href="" style="text-decoration: none; ">
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Labrador_Retriever.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Labrador Retriever</h5>
+                  <p class="card-text">Joyful nature make them cherished of countless households</p>
+                </div>
+              </div>
+          </a>        
+        </div>
+        <div class="col-sm-4">
+          <a href="" style="text-decoration: none; ">
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Poodle.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Poodle</h5>
+                  <p class="card-text">Elegance and versatile dog breed with a distinctive curly coat.</p>
+                </div>
+              </div>
+          </a>        
+        </div>
+        <div class="col-sm-4">  
+          <a href="" style="text-decoration: none; ">        
+            <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+                <img class="card-img-top" src="static/core/images/dog/Siberian_Husky.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Siberian Husky</h5>
+                  <p class="card-text"> Siberian Husky is known for its striking and friendly demeanor.</p>
+                </div>
+              </div>
+          </a>
+        </div>
+        
+        
+    </div>
+</div>
+<!--  End Dog Card-->
+
+
+{% endblock content %}
