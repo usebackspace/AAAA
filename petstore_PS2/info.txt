@@ -1,0 +1,11 @@
+petstore - Phase 2
+
+1. In this phase 2 we will work on forms
+
+2. worked on navbar that show profile and logout option only if user is authenticated
+
+3. we have created register form and login form
+
+4. we have change password from to change password
+
+5. worked on logic of authentication

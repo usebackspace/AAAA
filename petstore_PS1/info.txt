@@ -1,0 +1,7 @@
+petstore - Phase 1
+
+1. In this phase 1 we have created models for our project and added some data in pet model.
+
+2. we have deleted extra html element.
+
+3. we have render the data in html from data model.
