@@ -1,0 +1,6 @@
+petstore - Phase 2
+
+1. We will work on add_to_cart functionality.
+
+2. We will work on product quantity.
+
