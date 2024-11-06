@@ -35,8 +35,8 @@ class UserProfileForm(UserChangeForm):
                   'first_name':forms.TextInput(attrs={'class':'form-control'}),
                   'last_name':forms.TextInput(attrs={'class':'form-control'}),
                   'email':forms.TextInput(attrs={'class':'form-control'}),
-                  'date_joined':forms.DateInput(attrs={'class':'form-control','type': 'date'}),
-                  'last_login':forms.DateInput(attrs={'class':'form-control','type': 'date'}),
+                  'date_joined':forms.DateInput(attrs={'class':'form-control','type': 'date','disabled':'disabled'}),
+                  'last_login':forms.DateInput(attrs={'class':'form-control','type': 'date','disabled':'disabled'}),
                   }
 
 class AdminProfileForm(UserChangeForm):

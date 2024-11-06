@@ -6,3 +6,4 @@ petstore - Phase 4
 
 3. We will also add message framework to add_to_cart button.
 
+4. We will also disabled the date_joined and last_login field disabled.
