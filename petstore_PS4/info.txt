@@ -1,0 +1,8 @@
+petstore - Phase 4
+
+1. We will work on functionality of delete button.
+
+2. We will work on order summary page.
+
+3. We will also add message framework to add_to_cart button.
+

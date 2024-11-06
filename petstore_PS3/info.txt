@@ -1,6 +1,6 @@
-petstore - Phase 2
+petstore - Phase 3
 
 1. We will work on add_to_cart functionality.
 
-2. We will work on product quantity.
+2. We will work on product quantity, that can be increase or decrease by clicking on + or - icons.
 
