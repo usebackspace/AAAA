@@ -77,14 +77,9 @@
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1 ">
                             <h5 class="mb-0">₹{{item.price_and_quantity_total}}</h5>
                         </div>
-                        <form action="{% url "deletecart" item.id %}" method="POST">
-                            {% csrf_token %}
-                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fas fa-trash fa-lg"></i>
-                                </button>
-                            </div>
-                        </form>
+                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <a href="{% url "deletecart" item.id %}" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                        </div>
                         </div>
                     </div>
                     </div>
