@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="container register h-50">
+    <div class="register-heading ">
+        <h2 class="mb-3 text-primary">Register Here</h2>
+    </div>
+   <form action="" method="POST" novalidate>
+        {% csrf_token %}
+
+        {% if mf.non_field_errors %}
+            {% for error in mf.non_field_errors %}
+                <span class="alert alert-danger">{{error}}</span>
+
+            {% endfor %}
+        {% endif %}
+
+        {% for m in mf%}
+        <div class="form-group mr-4 ml-4 ">
+            {{m.label_tag}} {{m}} {{m.errors}}
+        </div> 
+        {% endfor %}
+        <div class="text-center">
+        <input type="submit" value="Login" class="btn btn-success register-button">
+        </div>
+    </form>
+</div>
+<br>
+    {% if messages %}
+        {% for message in messages %}
+             <span {% if message.tags %} class="alert alert-{{message.tags}}" {% endif %}>{{message}}</span>
+        {% endfor %}
+    {% endif %}
+
+{% endblock content %}
