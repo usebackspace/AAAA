@@ -182,3 +182,4 @@ def delete_address(request,id):
         de = CustomerDetail.objects.get(pk=id)
         de.delete()
     return redirect('address')
+
