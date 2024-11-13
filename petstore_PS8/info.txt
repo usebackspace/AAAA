@@ -1,0 +1,26 @@
+petstore - Phase 8
+
+1. A. To choose particular address that we want to deliver for that we will add radio button to the address.
+
+   B. We will put address detail inside form tag and put method="POST" so that when we click proceed to payment button.
+      As Form is submitted we will send name="selected_address"  to the payment() and fetch the data through, 
+        if request.method == 'POST':
+            selected_address_id = request.POST.get('selected_address')
+
+3. We will create payment() function and payment url and payment.html page, render paypal payment on payment.html
+
+    <div class="row">
+        {{paypal.render}}
+
+    </div>
+
+
+4. After Payment is done it will redirect to the payment_success.html 
+
+
+5. As order has placed so se have to create a order page i.e order.html and also url and view function for order.html
+    def order(request):
+        ord=Order.objects.filter(user=request.user)
+        return render(request,'core/order.html',{'ord':ord})   
+
+   To render data on order.html page

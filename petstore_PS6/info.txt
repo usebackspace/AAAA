@@ -1,3 +1,4 @@
 petstore - Phase 6
 
 1. We will work on Checkout page.
+   In checkout page we will show order summary and available address of customer to customer, on which address he want delhivery.
