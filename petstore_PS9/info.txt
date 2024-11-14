@@ -1,0 +1,51 @@
+petstore - Phase 9
+
+1. We will work on Buy Now button
+
+2. In this phase we have added 3 functions
+    1.buynow()
+    2.buynow_payment()
+    3.buynow_payment_success()
+
+3. buynow(): In this we will fetch id of particular pet from pet_details.html through i.e pet.id
+
+    <a href="{% url "buynow" dc.id %}" class="btn btn-success my-2">Buy Now</a>
+    
+    1. Now we will fetch object from that particular pet.id 
+   
+        pet = Pet.objects.get(pk=id)
+
+    2. Now we calculate final_price and render it to buynow.html 
+
+    3. Now we select address in buynow.html and click on proceed to payment.
+
+    4. Now when click on proceed to payment it will render to buynow_payment() with pet.id
+        
+        <form method="post" action="{% url 'buynowpayment' pet.id %}">
+   
+        as we have put address field in <form> tag so we will use name="buynow_selected_address" to fetch value 
+        value="{{ add.id }}" from radio button in  buynow_payment() function     
+
+
+4. buynow_payment(): In this function we use fetch pet.id and buynow_selected_address to calculate price and 
+                     to send pet.id and buynow_selected_address to buynow_payment_success() to save order after
+                     payment
+
+    1. we will use same paypal code as we have used in payment() function, adding some extra field in return_url 
+       in paypal
+        
+        'return_url': f"http://{host}{reverse('buynowpaymentsuccess', args=[selected_address_id,id])}",
+
+    2. After successful payment it will redirect to buynow_payment_success() function with selected_address_id and id
+       
+
+5. buynow_payment_success(): In this function we will fetch customer details and pet details through selected_address_id and id
+   
+    1. customer_data = Customer.objects.get(pk=selected_address_id) # will fetch details of particular customer object
+        
+    2. pet = Pet.objects.get(pk=id)  # will fetch details of particular Pet object
+
+    3. After fetching the data we will save the fetch data into Order Model
+        Order(user=user,customer=customer_data,pet=pet,quantity=1).save()
+        
+    4. And lastly render to buynow_payment_success.html

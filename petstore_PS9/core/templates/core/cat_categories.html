@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+
+{% block title %}Cat Categories{% endblock title %}
+
+{% block content %}
+
+<!-- Cat Card-->
+<div class="container ">                         <!-- we have created new container class-->
+    <div class="row">                           <!-- we have created row class-->
+      {% for dc in dc %}
+      <div class="col-sm-4 ">
+        <a href="{% url "petdetails" dc.id %}" style="text-decoration: none; ">        
+          <div class="card dog_categories_card dog_card" style="width: 18rem; height:20rem">
+            <img class="card-img-top " src="{{dc.pet_image.url}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{dc.name}}</h5>
+                   <div class="text-center">
+                     <h5 class="font-weight-bold text-dark "><i class="fa-solid fa-indian-rupee-sign"></i>{{dc.discounted_price}} <small class="fw-light rupee">{{dc.original_price}}</small> <small class="text-danger">(72% off)</small></h5> 
+                    </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+    </div>
+</div>
+<!--  End Dog Card-->
+
+
+
+
+{% endblock content %}
+
+
+
+
