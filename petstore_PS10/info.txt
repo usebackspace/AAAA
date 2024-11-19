@@ -1,0 +1,7 @@
+petstore - Phase 10
+
+1. we will work on forget password.
+
+2. we will work on registration page, after successful registration we will send mail to email id.
+
+3. We will also send mail of order successful.
