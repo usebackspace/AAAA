@@ -62,8 +62,7 @@ class Pet(models.Model):
     CATEGORY_CHOICES = [
         ('DOG', 'Dog'),
         ('CAT', 'Cat'),
-        ('BIRD', 'Bird'),
-        
+        ('BIRD', 'Bird'), 
     ]
 
     name = models.CharField(max_length=100)
