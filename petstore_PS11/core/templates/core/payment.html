@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="payment-container">
+    <div class="payment-wrapper">
+        <h3 class="text-center text-primary">Complete Your Payment</h3>
+        <div class="payment-options">
+            <!-- PayPal Payment Button -->
+            <div class="payment-option">
+                {{ paypal.render }}
+            </div>
+
+            <!-- Additional Payment Options -->
+            <div class="payment-option">
+                <button class="payment-button credit-card-btn">Pay with Credit/Debit Card</button>
+            </div>
+            <div class="payment-option">
+                <button class="payment-button google-pay-btn">Pay with Google Pay</button>
+            </div>
+            <div class="payment-option">
+                <button class="payment-button apple-pay-btn">Pay with Apple Pay</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

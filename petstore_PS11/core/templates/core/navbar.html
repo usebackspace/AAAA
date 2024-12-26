@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="/">Petstore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'about' %}">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/" role="button" data-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'dogcategories' %}">Dog</a>
+            <a class="dropdown-item" href="{% url 'catcategories' %}">Cat</a>
+            <a class="dropdown-item" href="{% url 'birdcategories' %}">Bird</a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-lg-0 mr-auto">
+        <input class="form-control custom-search-bar mr-2 " type="search" placeholder="Search" aria-label="Search" style="width:300px">
+        <button class="btn  btn-outline-success  my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item active">
+          <a class="nav-link mr-3 nav-user" href="{% url 'profile' %}"><b>Welcome {{user.first_name}}</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3" href="{% url 'viewcart' %}">
+            <i class="fa fa-shopping-cart"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3 nav-user" href="{% url 'logout' %}">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link mr-3 nav-user" href="{% url 'registration' %}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3 nav-user" href="{% url 'login' %}">Login</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

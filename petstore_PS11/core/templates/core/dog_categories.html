@@ -1,0 +1,80 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+{% block title %}Dog Categories{% endblock title %}
+
+{% block content %}
+
+<!-- Dog Card-->
+<div class="container-fluid dog-container"> <!-- Use container-fluid for full-width layout -->
+    <div class="row">
+        <!-- Filtering Column (3 Columns Wide) -->
+        <div class="col-md-3 filter-column">           
+            <!-- Price Range Filter -->
+            <div class="filter-title">Price Range</div>
+            <div class="filter-option">
+                <label><input type="checkbox" name="price" value="0-50"> $0 - $50</label><br>
+                <label><input type="checkbox" name="price" value="50-100"> $50 - $100</label><br>
+                <label><input type="checkbox" name="price" value="100-200"> $100 - $200</label>
+            </div>
+            
+            <!-- Color Filter -->
+            <div class="filter-title">Color</div>
+            <div class="filter-option">
+                <label><input type="checkbox" name="color" value="red"> Red</label><br>
+                <label><input type="checkbox" name="color" value="blue"> Blue</label><br>
+                <label><input type="checkbox" name="color" value="green"> Green</label><br>
+                <label><input type="checkbox" name="color" value="black"> Black</label>
+            </div>
+            
+            <!-- Discount Filter (Radio Buttons) -->
+            <div class="filter-title">Discount</div>
+            <div class="filter-option">
+                <label><input type="radio" name="discount" value="10"> 10% Off</label><br>
+                <label><input type="radio" name="discount" value="20"> 20% Off</label><br>
+                <label><input type="radio" name="discount" value="30"> 30% Off</label>
+            </div>
+        </div>
+        
+        <!-- Product Display Column (9 Columns Wide) -->
+        <div class="col-md-9 product-column">
+            <div class="sort-options">
+                <label for="sort" class="sort-by">Sort By: </label>
+                <select id="sort" class="form-control d-inline w-auto">
+                    <option value="latest">Latest</option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                </select>
+            </div>
+            
+            <!-- Product Cards -->
+            
+            <div class="row">
+                {% for dc in dog_category %}
+                <div class="col-sm-4 mb-4">
+                  <a href="{% url 'petdetails' dc.id %}" style="text-decoration: none;">
+                    <div class="card dog_categories_card dog_card">
+                        <img class="card-img-top" src="{{dc.pet_image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title dog-name">{{dc.name}}</h5>
+                           <div class="text-center">
+                                <h5 class="font-weight-bold text-dark">
+                                    <i class="fa-solid fa-indian-rupee-sign dog-name"></i> <span class="dog-discounted-price">{{dc.discounted_price}}</span> 
+                                    <s class="text-danger"><small class="fw-light rupee dog-name">{{dc.selling_price}}</small></s> 
+                                    <small class="text-warning">(% off)</small>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  End Dog Card-->
+
+
+{% endblock content %}

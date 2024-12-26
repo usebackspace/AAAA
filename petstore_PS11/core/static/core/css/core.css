@@ -1,0 +1,1389 @@
+/* ================= Background CSS ======================== */
+/* Body background with gradient */
+body {
+  background: linear-gradient(135deg, #ffe02f, #ff5c20);
+  transition: background 0.5s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+/* =================== Navbar CSS ========================= */
+/* Custom Navbar Styles */
+.navbar-custom {
+  background: linear-gradient(135deg, #FFD700, #FF4500);
+  /* Gradient Background */
+  padding: 15px;
+  transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.navbar-custom .nav-user {
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #FF4500;
+}
+
+.navbar-custom .nav-link {
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.navbar-custom .navbar-toggler-icon {
+  color: #fff;
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: #ffd700;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .dropdown-item {
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.custom-search-bar {
+  border-radius: 20px;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar {
+  width: 20%;
+}
+
+@media (max-width: 992px) {
+  .navbar-custom {
+    padding: 10px;
+  }
+
+  .custom-search-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-custom {
+    padding: 8px;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+/* ======================== Carousel CSS ============================ */
+
+/* Carousel Styles */
+
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark overlay */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.carousel-caption .btn-custom {
+  background-color: #FFD700;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.carousel-caption .btn-custom:hover {
+  background-color: #FF4500;
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-caption {
+    bottom: 10%;
+  }
+}
+
+/* Responsive Carousel Image */
+.carousel-item img {
+  width: 100%;
+  /* Full width */
+  height: auto;
+  /* Adjust height proportionally */
+  object-fit: cover;
+  /* Ensures the image covers the container without stretching */
+  max-height: 600px;
+  /* Limits the height of the image */
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 400px;
+    /* Adjust max height for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-height: 300px;
+    /* Further adjust for very small screens */
+  }
+}
+
+/* =============== Image card Css ================== */
+
+
+.pet-cat {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  color: #fff;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+
+.pet-cat:hover {
+  color: #FF4500;
+}
+
+/* Card Deck Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 15px;
+}
+
+/* Individual Card Styling */
+.card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image Styling */
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Card Body Styling */
+.card-body {
+  background-color: #f8f9fa;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.container .card-deck a {
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-deck {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+/* Link Styling */
+.card-img-href {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.card-img-href:hover {
+  color: #fbb034;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* Space between cards */
+}
+
+/* ================ Featurette CSS ======================= */
+
+/* Featurette Section */
+.featurette-divider {
+  border-top: 1px solid #ddd;
+  margin: 3rem 0;
+}
+
+/* Featurette Text */
+.featurette-heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.featurette-heading:hover {
+  color: #FF4500;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #160802;
+}
+
+/* Featurette Image */
+.featurette-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featurette-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .featurette {
+    flex-direction: column;
+  }
+
+  .featurette-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .featurette-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* =================== Footer CSS ========================= */
+/* Footer Styling */
+footer {
+  background: linear-gradient(135deg, #FFD700);
+  padding: 2rem 0;
+  color: #fff;
+}
+
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #ffffff;
+}
+
+footer img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer small {
+  color: #fff;
+}
+
+.border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+  }
+
+  footer .col-md {
+    margin-bottom: 1.5rem;
+  }
+
+  footer img {
+    margin: 0 auto;
+  }
+}
+
+
+
+/* =================== About Us Section =================== */
+
+.container.about {
+  padding: 2rem;
+  background: linear-gradient(135deg, #FFD700);
+  /* Light background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading_about h1,
+.mission h1,
+.ourstory h1,
+.apart h1,
+.commitment h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #FF4500;
+  /* Darker color for headings */
+  transition: color 0.3s ease;
+}
+
+.heading_about h1:hover,
+.mission h1:hover,
+.ourstory h1:hover,
+.apart h1:hover,
+.commitment h1:hover {
+  color: #FF4500;
+  /* Highlight color on hover */
+}
+
+.para,
+.mission_para,
+.ourstory_Para,
+.apart_para,
+.commitment_para {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #160802;
+  /* Dark gray for text */
+  margin-bottom: 1.5rem;
+}
+
+.para,
+.mission_para,
+.ourstory_Para,
+.apart_para,
+.commitment_para {
+  background: linear-gradient(135deg, #FFD700);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.para {
+  margin-bottom: 2rem;
+}
+
+.mission,
+.ourstory,
+.apart,
+.commitment {
+  margin-top: 2rem;
+}
+
+
+/* ==================== Dog Category Filter Option ================== */
+.dog-container {
+  margin-top: 6%;
+}
+
+/* filter-title Text */
+.filter-title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  color: #FF4500;
+  transition: color 0.3s ease;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.filter-option {
+  margin-left: 15%;
+  font-size: 1rem;
+}
+
+.filter-column {
+  border-right: 1px solid #ffab8c;
+}
+
+/* Style the checkbox */
+.filter-option input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.filter-option input[type="checkbox"]:checked {
+  background-color: #FF4500;
+  border-color: #007bff;
+  color: white;
+}
+
+.filter-option input[type="checkbox"]:checked::after {
+  content: '\2714';
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+/* Style the radio button */
+.filter-option input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.filter-option input[type="radio"]:checked {
+  border-color: #007bff;
+  background-color: #FF4500;
+}
+
+.filter-option input[type="radio"]:checked::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Sort Options */
+.sort-options {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.sort-by {
+  font-size: 1.5rem;
+  color: #663399;
+}
+
+.sort-options .form-control {
+  width: auto;
+  max-width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .filter-column {
+    border-right: none;
+    /* Remove border on smaller screens */
+  }
+
+  .filter-option {
+    margin-left: 5%;
+    font-size: 0.9rem;
+  }
+
+  .filter-title {
+    font-size: 1.5rem;
+    margin-left: 5%;
+  }
+
+  .sort-options {
+    width: 70%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .sort-options .form-control {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-column {
+    margin-bottom: 2%;
+    border-right: none;
+  }
+
+  .filter-option {
+    margin-left: 0;
+    margin-bottom: 1%;
+    font-size: 0.8rem;
+  }
+
+  .filter-title {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  .sort-options {
+    width: 70%;
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+}
+
+
+.sort-options {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligns content to the right */
+  width: 100%;
+  /* Full width */
+  max-width: 100%;
+  /* Ensures it doesn't exceed container width */
+  margin-bottom: 20px;
+  /* Adds some space below */
+  padding-right: 15px;
+  /* Optional: Adds padding to the right */
+  box-sizing: border-box;
+  /* Ensures padding is included in the width */
+}
+
+.sort-by {
+  font-size: 1.5rem;
+  color: #663399;
+  margin-right: 10px;
+  /* Space between label and dropdown */
+}
+
+.sort-options .form-control {
+  flex-grow: 1;
+  /* Allows the dropdown to grow */
+  max-width: 200px;
+  /* Set a maximum width for the dropdown */
+  min-width: 150px;
+  /* Set a minimum width for the dropdown */
+}
+
+@media (max-width: 768px) {
+  .sort-options {
+    flex-direction: column;
+    /* Stacks elements vertically on small screens */
+    align-items: flex-start;
+    /* Aligns items to the start */
+    padding-right: 0;
+    /* Removes right padding on small screens */
+  }
+
+  .sort-by {
+    margin-right: 0;
+    /* Removes margin on small screens */
+    margin-bottom: 10px;
+    /* Adds space below label on small screens */
+  }
+
+  .sort-options .form-control {
+    width: 70%;
+    /* Full width on small screens */
+    max-width: none;
+    /* Removes max-width on small screens */
+  }
+}
+
+/* General Styles for Sort Options */
+.sort-options {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligns content to the right */
+  width: 100%;
+  /* Full width */
+  margin-bottom: 20px;
+  /* Adds some space below */
+  padding-right: 15px;
+  /* Padding to the right for spacing */
+  box-sizing: border-box;
+  /* Includes padding in the width */
+}
+
+.sort-by {
+  font-size: 1.5rem;
+  color: #663399;
+  margin-right: 10px;
+  /* Space between label and dropdown */
+}
+
+.sort-options .form-control {
+  max-width: 200px;
+  /* Sets a max width for the dropdown */
+  min-width: 150px;
+  /* Sets a min width for the dropdown */
+  width: auto;
+  /* Ensures the dropdown adjusts within the max/min width */
+}
+
+/* ========================== Dog Categories CSS ============================ */
+
+.dog-name {
+  color: #FF4500
+}
+
+.dog-discounted-price {
+  color: #663399;
+}
+
+
+/* ========================= Pet Details CSS ===================== */
+
+.petdetails {
+  margin-top: 8%;
+
+}
+
+.pet-discounted-price {
+  color: #663399;
+}
+
+
+.pet-description-heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  color: #FF4500;
+}
+
+.pet-description {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  color: #3b1404
+}
+
+.add-to-cart {
+  background-color: #FF4500;
+}
+
+.add-to-cart:hover {
+  background-color: #129406;
+}
+
+.buy-now {
+  background-color: #fcdb1e;
+}
+
+.buy-now:hover {
+  background-color: #129406;;
+}
+
+
+/* ======================== Login Page CSS ====================== */
+/* Container Padding */
+.register {
+  padding: 50px 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Heading Styling */
+.register-heading h2 {
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form Group Margin */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Input Fields Styling */
+.register .form-control {
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input Fields Focus State */
+.register .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styling */
+.register-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Submit Button Hover State */
+.register-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Forgot Password Link Styling */
+a p {
+  color: #007bff;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a p:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .register {
+    padding: 30px 10px;
+  }
+
+  .register-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .register-button {
+    font-size: 1.1rem;
+  }
+}
+
+
+/*========================Register And Login Page CSS ========================== */
+
+/* Container Padding */
+.register {
+  padding: 50px 15px;
+  background: linear-gradient(135deg, #ffe02f, #ff5c20);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+  /* Blur effect */
+}
+
+/* Heading Styling */
+.register-heading h2 {
+  font-size: 2rem;
+  color: #FF4500;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form Group Margin */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Input Fields Styling */
+.register .form-control {
+  border: 2px solid #FF4500;
+  border-radius: 5px;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input Fields Focus State */
+.register .form-control:focus {
+  border-color: #FF4500;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styling */
+.register-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  width: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  background-color: #fbb034;
+  color: #FF4500;
+  text-decoration: none;
+}
+
+/* Submit Button Hover State */
+.register-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Forgot Password Link Styling */
+a p {
+  color: #007bff;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a p:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .register {
+    padding: 30px 10px;
+  }
+
+  .register-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .register-button {
+    font-size: 1.1rem;
+  }
+}
+
+.login-page {
+  margin-top: 10%;
+}
+
+.register-page {
+  margin-top: 7%;
+}
+
+.register .reg a {
+  color: #FFf;
+  font-size: 1.3rem;
+  padding-right: 5%;
+  padding-left: 5%;
+  text-decoration: none;
+}
+
+
+/* ========================== View Cart CSS ============================ */
+
+/* General Styles */
+.profile {
+  background: #f8f9fa;
+}
+
+.sidebar {
+  padding: 1rem;
+  border-right: 2px solid #fcdb1e;
+}
+
+.sidebar .nav-link {
+  color: #FF4500;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.3rem;
+  margin-top: 4%;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffe02f, #ff5c20);
+  border: none;
+  border-radius: 10px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.cart-item {
+  background: linear-gradient(135deg, #ffe02f, #ff5c20);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.checkout-card {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  border-radius: 10px;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.btn-success {
+  background-color: #FFD700;
+  border-color: #FF4500;
+  color: #160802;
+  font-size: 1.3rem;
+}
+
+.btn-success:hover {
+  background-color: #FF4500;
+  border-color: #FFD700;
+  text-decoration: none;
+}
+
+.view-cart {
+  margin-top: 5%;
+}
+
+.view-cart-right-side-bar {
+  background: linear-gradient(135deg, #ffe02f, #ff5c20);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+    /* Hide sidebar on small screens */
+  }
+
+  .col-md-10 {
+    margin-left: 0;
+  }
+
+  .cart-item,
+  .checkout-card {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+
+/* ============================= Profile Page =========================== */
+
+/* Profile form container styles */
+.profile-form {
+  background: linear-gradient(135deg, #ffe02f, #ff5c20);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s ease;
+  width: 60%;
+}
+
+/* Form group margin */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.profile {
+  padding-bottom: 7%;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    min-height: auto;
+  }
+
+  .profile-form {
+    margin-top: 20px;
+  }
+
+  .nav-link {
+    padding: 10px 15px;
+  }
+
+  .sidebar-sticky {
+    position: relative;
+  }
+
+  .btn-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    display: none;
+  }
+
+  .profile-form {
+    margin-top: 20px;
+  }
+}
+
+
+/* ====================== Address Page CSS =================== */
+
+.add-address {
+  margin-left: 100%;
+  font-size: 1.3rem;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.add-address:hover {
+  background-color: green;
+  border-radius: 5px;
+  color: #fcdb1e;
+}
+
+.address-detail {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Make the profile and address sections responsive */
+@media (max-width: 767px) {
+  .sidebar {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .profile .row {
+    flex-direction: column;
+  }
+
+  .col-md-2,
+  .col-md-8,
+  .col-sm-6 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  .btn-warning {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .col-md-2,
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+
+
+
+/* ========================= CHeckout Page CSS ======================= */
+.checkout-button {
+  gap: 15px;
+  /* Adjust the gap as needed */
+}
+
+.checkout-back {
+  margin-left: 100%;
+  width: 100%;
+  text-align: center;
+  /* Center the buttons */
+}
+
+.checkout-process {
+  margin-left: 20%;
+  width: 100%;
+  text-align: center;
+  /* Center the buttons */
+}
+
+@media (max-width: 768px) {
+  .checkout-button {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-back {
+    width: 100%;
+    /* Make buttons full-width on smaller screens */
+    text-align: center;
+    /* Center the buttons */
+  }
+
+  .checkout-process {
+    width: 100%;
+    margin-left: 100%;
+  }
+}
+
+.empty-cart{
+  width: 40%;
+  margin-top: 5%;
+  margin-left: 30%;
+}
+
+
+.proceed-to-pay{
+  margin-top: 8%;
+  width: 50%;
+  margin-left: 28%;
+}
+
+.figcaption{
+  text-align: center;
+  color: #FFf;
+}
+
+.proceed-to-payment:hover{
+  background-color: #FF4500;
+}
+
+/* ===================== Paypal Payement CSS ====================== */
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+}
+
+.payment-wrapper {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.payment-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.payment-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Colors */
+.credit-card-btn {
+  background-color: #1e88e5;
+  /* Blue for credit card */
+}
+
+.google-pay-btn {
+  background-color: #34a853;
+  /* Green for Google Pay */
+}
+
+.apple-pay-btn {
+  background-color: #333333;
+  /* Dark color for Apple Pay */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-wrapper {
+    padding: 20px;
+  }
+
+  .payment-button {
+    font-size: 0.9em;
+  }
+}
+
+/* ===================== Forget Password CSS ====================== */
+
+/* Container gradient background */
+.forget-pass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+}
+
+/* Form container styling */
+.profile-form {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+  border-radius: 15px;
+}
+
+/* Gradient button styling */
+.btn-gradient {
+  background: linear-gradient(135deg, #ffe02f, #e6c407);
+  color: red;
+  border: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-gradient:hover {
+  color: whitesmoke;
+  background: linear-gradient(to right, #16a103, #1bbd06);
+  transform: scale(1.05);
+}
+
+/* Responsive Form and Elements */
+@media (max-width: 768px) {
+  .profile-form {
+    padding: 1.5rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+}
+
+
+/* =================== Password Reset Done ================= */
+
+/* Full-page gradient background */
+.success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7%;
+ 
+}
+
+/* Styling for success message container */
+.success-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Semi-transparent background */
+  padding: 2rem;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-in-out;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .success-content {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-gradient {
+    font-size: 1rem;
+  }
+}
+

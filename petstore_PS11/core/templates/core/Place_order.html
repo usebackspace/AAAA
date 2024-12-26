@@ -1,0 +1,100 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+<!-- ========================================= Order Summary Start Here ====================================-->
+
+        <div class="col-sm-6 mt-5">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mt-5">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <h3 class="text-xs-center"><strong>Order summary</strong></h3>
+                                </div>
+                                <div class="card-block">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <td><strong>Pet Name</strong></td>
+                                                    <td class="text-xs-center"><strong>Pet Price</strong></td>
+                                                    <td class="text-xs-center"><strong>Pet Quantity</strong></td>
+                                                    <td class="text-xs-right"><strong>Total</strong></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for item in cart_items %}
+                                                <tr>
+                                                    <td>{{item.product.name}}</td>
+                                                    <td class="text-xs-center">₹{{item.product.discounted_price}}</td>
+                                                    <td class="text-xs-center">{{item.quantity}}</td>
+                                                    <td class="text-xs-right">₹{{item.product.price_and_quantity_total}}</td>
+                                                </tr>
+                                                {% endfor %}
+                                                <tr>
+                                                    <td class="highrow"></td>
+                                                    <td class="highrow"></td>
+                                                    <td class="highrow text-xs-center"><strong>Subtotal</strong></td>
+                                                    <td class="highrow text-xs-right">₹<b>{{total}}</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="emptyrow"></td>
+                                                    <td class="emptyrow"></td>
+                                                    <td class="emptyrow text-xs-center"><strong>Shipping</strong></td>
+                                                    <td class="emptyrow text-xs-right">₹2000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+                                                    <td class="emptyrow"></td>
+                                                    <td class="emptyrow text-xs-center"><strong>Total</strong></td>
+                                                    <td class="emptyrow text-xs-right">₹<b>{{final_price}}</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+<!-- ========================================= Order summary End Here ====================================-->
+
+        <!-- ========================================= Address Start Here ====================================-->
+        <div class="col-sm-5 mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 mt-3">
+                          <form method="post" action="{% url 'payment' %}">
+                                {% csrf_token %}
+                                    {% for add in address %}
+                                    <label >
+                                        <div class="card flex-md-row mb-4 box-shadow h-md-250 mt-4 ml-4">
+                                            <div class="card-body d-flex flex-column align-items-start">
+                                                <h3 class="mb-0">
+                                                    <input type="radio" name="selected_address" value="{{ add.id }}">
+                                                Name: {{add.name}}
+                                            </h3>
+                                            <p class="card-text mb-auto">Address:{{add.address}} </p>
+                                            <p class="card-text mb-auto">City:{{add.city}} </p>
+                                            <p class="card-text mb-auto">State: {{add.state}} </p>
+                                            <p class="card-text mb-auto">Pincode:{{add.pincode}} </p> 
+                                            </div>
+                                        </div>
+                                    </label>
+                                    {% endfor %}
+                                       <input type="submit" class="btn btn-primary" value="Proceed to Payment">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- ========================================= Address End Here ====================================-->
+
+      </div>
+</div>
+{% endblock content %}

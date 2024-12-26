@@ -1,0 +1,15 @@
+petstore - Phase 11
+
+1. In this project we enhance the frontend part of the petstore.
+
+2. We have added empty cart image in view_cart.html file if there is no item in a cart.
+
+3. We have worked on field error and non-field errors  and also included message framework.
+
+4. We have worked on date_field and last_login field to make it disabled, we have also change the
+   DateInput() to DateTimeInput().
+
+5. We have worked on Time zone to correct the time by going into settings.py file
+   changing TIME_ZONE = 'UTC' to TIME_ZONE = 'Asia/Kolkata'
+
+6. In this we have added non-field errors.

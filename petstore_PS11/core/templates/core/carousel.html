@@ -1,0 +1,41 @@
+<!-- Carousel -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/core/images/carousel/dog1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-overlay"></div>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Symbol OF Loyalty</h1>
+          <p>Dogs hold a special place in human society, serving diverse roles and forming deep connections with their owners.</p>
+          <p><a class="btn btn-lg btn-custom" href="{% url 'dogcategories' %}" role="button">Explore</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <img src="static/core/images/carousel/cat.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-overlay"></div>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1 style="color: #FFD700;">Symbol Of Mystery</h1>
+          <p>Cats are unique and adaptable pets with distinctive behaviors. Their independence, hunting instincts, and companionship make them beloved members of many households.</p>
+          <p><a class="btn btn-lg btn-custom" href="{% url 'catcategories' %}" role="button">Explore</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <img src="static/core/images/carousel/bird.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-overlay"></div>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Symbol Of Freedom</h1>
+          <p>Birds are a highly diverse group of animals with remarkable adaptations for various environments.</p>
+          <p><a class="btn btn-lg btn-custom" href="{% url 'birdcategories' %}" role="button">Explore</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Carousel End -->

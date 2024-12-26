@@ -1,0 +1,102 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 mt-5 ml-5 ">
+            <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 mt-5">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <h3 class="text-xs-center"><strong>Order summary</strong></h3>
+                                </div>
+                                <div class="card-block">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <td><strong>Pet Name</strong></td>
+                                                    <td class="text-xs-center"><strong>Pet Price</strong></td>
+                                                    <td class="text-xs-center"><strong>Pet Quantity</strong></td>
+                                                    <td class="text-xs-right"><strong>Total</strong></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for item in cart_items %}
+                                                <tr>
+                                                    <td>{{item.product.name}}</td>
+                                                    <td class="text-xs-center">₹{{item.product.discounted_price}}</td>
+                                                    <td class="text-xs-center">{{item.quantity}}</td>
+                                                    <td class="text-xs-right">₹{{item.product.price_and_quantity_total}}</td>
+                                                </tr>
+                                                {% endfor %}
+                                                <tr>
+                                                    <td class="highrow"></td>
+                                                    <td class="highrow"></td>
+                                                    <td class="highrow text-xs-center"><strong>Subtotal</strong></td>
+                                                    <td class="highrow text-xs-right">₹<b>{{total}}</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="emptyrow"></td>
+                                                    <td class="emptyrow"></td>
+                                                    <td class="emptyrow text-xs-center"><strong>Shipping</strong></td>
+                                                    <td class="emptyrow text-xs-right">₹2000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+                                                    <td class="emptyrow"></td>
+                                                    <td class="emptyrow text-xs-center"><strong>Total</strong></td>
+                                                    <td class="emptyrow text-xs-right">₹<b>{{final_price}}</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                       <form method="POST" action="{% url 'payment' %}">
+                        {% csrf_token %}
+                        <div class="col-sm-4 mt-3">
+                            {% for add in address %}
+                            <label class="address-label">
+                                <div class="card address-card shadow-sm mt-4 ">
+                                    <div class="card-body profile-form">
+                                        <h3 class="mb-3">
+                                            <input type="radio" name="selected_address" value="{{ add.id }}" checked>
+                                            <span class="address-name text-light">{{ add.name }}</span>
+                                        </h3>
+                                        <p class="address-detail">Address: {{ add.address }}</p>
+                                        <p class="address-detail">City: {{ add.city }}</p>
+                                        <p class="address-detail">State: {{ add.state }}</p>
+                                        <p class="address-detail">Pincode: {{ add.pincode }}</p>
+
+                                    </div>
+                                </div>
+                            </label>
+                            {% endfor %}
+                                <div class="checkout-button mt-5 ml-5 d-flex justify-content-between">
+                                    <div class="checkout-back">
+                                        <a href="{% url 'viewcart' %}">
+                                            <input type="button" class="btn btn-warning back-to-cart-button proceed-to-payment" value="Back to Cart">
+                                        </a>
+                                    </div>
+                                    <div class="checkout-process">
+                                        <a href="{% url "payment" %}">
+                                            <input type="submit" class="btn btn-warning proceed-to-payment" value="Proceed to Payment">
+                                        </a>
+                                    </div>
+                                </div> 
+                            </div>           
+                        </div>
+                    </form> 
+                    </div>
+                </div>
+        </div>            
+    </div>
+</div>
+{% endblock content %}

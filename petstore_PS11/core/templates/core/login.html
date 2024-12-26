@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="container register login-page">
+    <div class="register-heading ">
+        <h2 class="mb-3 text-danger">Please Login</h2>
+    </div>
+   <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% for f in mf%}
+        <div class="form-group mr-4 ml-4 ">
+            {{f.label_tag}} {{f}} {{f.errors|striptags}}
+        </div>
+        {% endfor %}
+        <div class="text-center">
+        <input type="submit" value="Login" class="btn btn-success register-button">
+        </div>
+    </form>
+    <br>
+    {% if mf.non_field_errors %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="fas fa-exclamation-circle me-2"></i>
+        <strong>Oops! Something went wrong:</strong>
+        <ul class="mb-0">
+            {% for error in mf.non_field_errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+    <div class="text-center mt-3 reg">
+        <a href="{% url "registration" %}" > Register Here </a> 
+        <a href="{% url "forgotpassword" %}"> forgot password?</a> 
+    </div>
+</div>
+
+{% endblock content %}
