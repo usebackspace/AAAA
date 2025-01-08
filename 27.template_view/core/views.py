@@ -12,5 +12,5 @@ class AboutView(TemplateView):
         context= super().get_context_data(**kwargs)
         # context={'name':'steve roger'}   # this will not pass the extra context
         context['name']='steve roger'   # we have to use this format for passing the extra context
-        print(kwargs)
+        print(kwargs)                   # In this we get 
         return context

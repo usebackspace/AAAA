@@ -6,6 +6,6 @@ urlpatterns = [
 
     # path('about/',views.TemplateView.as_view(template_name='core/about.html')),
     # path('about/',views.AboutView.as_view()),
-    # path('about/',views.AboutView.as_view()),
+    # path('about/<int:id>',views.AboutView.as_view()),     # this id will we fetch by **kwargs
     path('about/',views.AboutView.as_view(extra_context={'heroic_name':'captain america'})),
 ]
