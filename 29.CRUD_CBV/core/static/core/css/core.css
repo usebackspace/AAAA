@@ -1,0 +1,25 @@
+body{
+    background-color: chartreuse;
+}
+
+.crud-heading{
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    border: 5px double whitesmoke;
+    border-radius: 10px;
+
+}
+
+label{
+    font-size: 30px;
+    color: red;
+}
+
+.update-form{
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 40%;
+    padding: 10px;
+}
