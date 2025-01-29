@@ -113,15 +113,24 @@ USE_I18N = True
 
 USE_TZ = True
 
-#========================== Email Settings =================================
+# #========================== Brevo Email Settings =================================
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp-relay.brevo.com'  # Brevo's SMTP server
+# EMAIL_PORT = 587  # SMTP port for TLS
+# EMAIL_USE_TLS = True  # Use TLS for secure connection
+# EMAIL_HOST_USER = '80290d002@smtp-brevo.com'  # This is the Brevo SMTP login email
+# EMAIL_HOST_PASSWORD = 'nUxLdA1b9CkMwTFD'  # Brevo SMTP password
+# DEFAULT_FROM_EMAIL = 'fordjangopproject@gmail.com'  # Your Gmail address (or a verified Brevo email address)
+
+
+#========================== Gmail Email Settings =================================
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp-relay.brevo.com'  # Brevo's SMTP server
+EMAIL_HOST = 'smtp.gmail.com'  # Brevo's SMTP server
 EMAIL_PORT = 587  # SMTP port for TLS
 EMAIL_USE_TLS = True  # Use TLS for secure connection
-EMAIL_HOST_USER = '80290d002@smtp-brevo.com'  # This is the Brevo SMTP login email
-EMAIL_HOST_PASSWORD = 'nUxLdA1b9CkMwTFD'  # Brevo SMTP password
+EMAIL_HOST_USER = 'fordjangopproject@gmail.com'  # This is the Brevo SMTP login email
+EMAIL_HOST_PASSWORD = 'cbqy nrvg nqjr nzlh'  # Brevo SMTP password
 DEFAULT_FROM_EMAIL = 'fordjangopproject@gmail.com'  # Your Gmail address (or a verified Brevo email address)
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
